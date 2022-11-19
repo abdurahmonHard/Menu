@@ -1,0 +1,107 @@
+*,::before,::after {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   text-decoration: none;
+   outline: none;
+   box-sizing: border-box;
+}
+
+body{
+   background-image: url(../img/elements_header.jpg);
+   background-repeat: no-repeat;
+   /* background-image: unset; */
+   background-size: cover;
+   font-family: sans-serif ;
+  
+}
+
+.menyu__bar{
+   background: rgb(0,100,0);
+   text-align: center;
+}
+
+.menyu__bar ul {
+   display: inline-flex;
+   color: #fff;
+}
+
+.menyu__bar ul li{
+   width: 150px;
+   margin: 10px;
+   padding: 15px;
+}
+.menyu__bar a{
+  color: #fff;
+}
+
+.active, .menyu__bar ul li:hover{
+   background: #2bab0d;
+   border-radius: 3px;
+}
+
+.menyu__bar .fa{
+   margin-right: 8px;
+}
+
+.sub__menyu1{
+   display: none;
+}
+
+.menyu__bar ul li:hover .sub__menyu1{
+   display: block;
+   position: absolute;
+   background: rgb(0,100,0);
+   margin-top: 15px;
+   margin-left: -15px;
+}
+
+.menyu__bar ul li:hover .sub__menyu1 ul{
+   display: block;
+   margin: 10px;
+}
+
+.menyu__bar ul li:hover .sub__menyu1 ul li{
+   cursor: pointer;
+   width: 150px;
+   padding: 10px;
+   border-bottom: 1px dotted #fff;
+   background: transparent;
+   border-radius: 0;
+   text-align: left;
+}
+
+.menyu__bar ul li:hover .sub__menyu1 ul li:last-child{
+   border-bottom: none;
+}
+
+.menyu__bar ul li:hover .sub__menyu1 ul li a:hover{
+   color: #b2ff00;
+}
+
+.fa-angle-right{
+   float: right;
+}
+[id^=btn]:checked + ul{
+   display: block;
+
+}
+.sub__menu2{
+   display: none;
+   
+}
+
+.hover__me:hover .sub__menu2{
+   position: absolute;
+   display: block;
+   margin-top: -40px;
+   margin-left: 140px;
+   background: rgb(0,100,0);
+}
+
+.fa-caret-down{
+  margin-left: 5px; 
+}
+.sub__menyu1.feat-show.show{
+   display: block;
+}
